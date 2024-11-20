@@ -1,0 +1,409 @@
+:root {
+  --main-bg-color: #000000;
+  --text-color: #ffffff;
+  --portfolio-title-color: #d789d7;
+  --portfolio-title-hover-color: #53f3ce;
+  --project-card-bg: #000;
+  --project-title-bg: rgba(255, 255, 255, 0.8);
+}
+
+/* Portfolio Section */
+#portfolio {
+  text-align: left;
+  background-color: #000000;
+  margin-left: 350px;
+}
+
+/* Portfolio Title */
+.portfolio-title {
+  padding-top: 25px;
+  font-size: 50px;
+  color: #53f3ce;
+  margin-bottom: 20px;
+  
+  transition: color 0.3s ease-in-out;
+}
+
+/* Portfolio Description */
+.portfolio-description {
+  font-size: 1.1em;
+  color: #ffffff;
+  max-width: 1200px;
+  margin-left: 0px;
+  line-height: 1.6;
+}
+
+/* Portfolio Projects Container */
+.portfolio-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Project Card Styling */
+.project-card {
+  height: 100%; /* Allow dynamic height based on content */
+  width: 100%; /* Use full width of the grid item */
+  max-width: 500px; /* Set a max width for larger screens */
+  aspect-ratio: 3 / 2; /* Maintain a 3:2 aspect ratio */
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px; /* Slightly rounded corners for a modern look */
+  background-color: var(--project-card-bg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25); /* Slightly darker shadow */
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Less aggressive lift */
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+.project-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Project Image */
+.project-card img {
+  width: 100%;
+  height: 100%; /* Ensure the image covers the card */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05); /* Slightly less aggressive scale */
+}
+
+/* Project Title Styling */
+.project-title {
+  list-style-type: disc; /* Use filled circles for bullets */
+  padding-left: 35px; /* Indent the bullets */
+  margin: 0; /* Remove default margin */
+}
+
+.project-title li {
+  font-size: 36px; /* Size of project title */
+  color: #d789d7; /* Light pink color */
+  font-weight: 600; /* Bold for emphasis */
+  margin-bottom: 20px; /* Space below the title */
+  transition: color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and transform changes */
+}
+
+/* Project Description Styling */
+/* Project Description Styling */
+.project-description {
+  list-style-type: disc; /* Use filled circles for bullets */
+  padding-left: 20px; /* Indent the bullets */
+  margin: 10px 0 0; /* Space above the description */
+  color: #ffffff; /* Color for the description text */
+}
+.portfolio-description li{
+  background-color: darkgreen;
+  font-size: 160px;
+}
+
+/* Responsive Adjustments for Tablets */
+@media (max-width: 768px) {
+    .project-description {
+        font-size: 0.9em; /* Adjust font size for tablets */
+    }
+}
+
+/* Responsive Adjustments for Mobile Phones */
+@media (max-width: 480px) {
+    .project-description {
+        font-size: 0.8em; /* Adjust font size for mobile */
+        padding-left: 15px; /* Less indent for mobile */
+    }
+}
+/* Responsive Adjustments for Mobile Phones */
+@media (max-width: 480px) {
+  .project-description {
+    font-size: 0.9em; /* Slightly larger for smaller screens */
+    padding-left: 10px; /* Reduce padding for smaller screens */
+  }
+}
+/* Responsive Adjustments for Tablets */
+@media (max-width: 768px) {
+  #portfolio {
+    padding: 10px 20px;
+    margin-left: 10px;
+  }
+  .portfolio-title {
+    font-size: 2em;
+  }
+
+  .portfolio-description {
+    font-size: 1em;
+  }
+
+  .project-card {
+    margin-bottom: 20px;
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .project-description {
+    font-size: 0.9em;
+  }
+}
+
+/* Responsive Adjustments for Mobile Phones */
+@media (max-width: 480px) {
+  #portfolio {
+    padding: 10px 20px;
+    margin-left: 10px;
+  }
+  .portfolio-title {
+    font-size: 1.8em;
+  }
+
+  .portfolio-description {
+    font-size: 0.9em;
+    padding: 0 5px;
+  }
+
+  .portfolio-projects {
+    grid-template-columns: 1fr; /* Single column for small screens */
+    gap: 10px;
+  }
+
+  .project-description {
+    font-size: 0.8em;
+    padding-left: 10px;
+  }
+
+  .project-title li {
+    font-size: 25px;
+    padding: 3px 8px;
+  }
+
+  .project-card {
+    margin-bottom: 15px;
+  }
+}
+ 
+
+/* jhvnvh */
+
+/* General styling */
+
+/* Contact Section Styling */
+/* Contact Section Overall Styling */
+#contact {
+  max-width: 1200px;
+  margin-left: 350px;
+  padding: 20px 20px;
+  text-align: left;
+  /* background-color: #f9f9f9; */
+}
+
+.contact-title {
+  font-size: 50px;
+  color:#53f3ce; 
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+
+
+.contact-description {
+  max-width: 1200px;
+  margin-left: 0px;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+ 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 20px;
+  border: 2px solid #53f3ce;
+  margin-left: 0px;
+}
+
+/* Contact Info Styling */
+.contact-info {
+  flex: 1 1 300px;
+  padding: 30px;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #53f3ce;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #f4f4f4;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  flex: 2 1 500px;
+  padding: 30px;
+  /* background-color: white; */
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #53f3ce;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #d789d7;
+  box-shadow: 0 0 5px rgba(85, 243, 206, 0.5);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #666;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #d789d7;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #53f3ce;
+  color: black;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient Background Option */
+.contact-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #53f3ce, #d789d7);
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #contact {
+    overflow-x: hidden;
+    /* padding: 10px 15px; */
+    padding: 10px 20px;
+    margin-left: 10px; /* Minimal padding for compact layout */
+  }
+  .contact-container {
+      flex-direction: column;
+  }
+
+  .contact-title {
+      font-size: 2rem;
+  }
+
+  .contact-info,
+  .contact-form {
+      flex-basis: 100%;
+      padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #contact {
+    overflow-x: hidden;
+    padding: 10px 15px; /* Minimal padding for compact layout */
+  }
+  .contact-title {
+      font-size: 1.8rem;
+  }
+
+  .contact-info h2 {
+      font-size: 1.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+      font-size: 0.9rem;
+      padding: 10px;
+  }
+  #contact {
+    overflow-x: hidden;
+    /* padding: 10px 15px; */
+    padding: 10px 20px;
+    margin-left: 10px; /* Minimal padding for compact layout */
+  }
+}
+
+/* Additional Decorative Elements */
+.contact-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-container::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 100px;
+  height: 100px;
+  background-color: #53f3ce;
+  border-radius: 50%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Apply full opacity when animation is triggered */
+.fade-in.visible {
+  opacity: 1;
+}

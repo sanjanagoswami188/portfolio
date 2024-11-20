@@ -1,0 +1,387 @@
+:root {
+    --primary-color: #53f3ce;; /* Pink color */
+    --secondary-color: #333;
+    --background-color: #000000; /* Black background */
+    --text-color: #ffffff;
+    --font-size-large: 2.5em;
+    --font-size-medium: 1.2em;
+}
+#53f3ce #d789d7
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.skills-section {
+    background: var(--background-color); /* Black background */
+    color: var(--text-color);
+    padding: 50px 20px; /* Adjusted padding */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto; /* Center the section */
+    max-width: 1200px;
+    margin-left: 350px; /* Set a max-width for better alignment */
+}
+
+.skills-section h2 {
+    color: var(--primary-color); /* Pink color */
+    font-size: 50px;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease;
+    text-align: left;
+    padding-left: 0; /* Remove left padding */
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-top: 0px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+}
+
+.skill {
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    width: 280px;
+    height: 300px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; /* Reduced gap */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.skill:hover {
+    transform: translateY(-5px) rotate(1deg);
+    box-shadow: 0 20px 40px rgba(246, 70, 104, 0.4); /* Pink shadow on hover */
+}
+
+.skill-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px; /* Increased icon size */
+    height: 50px; /* Increased icon size */
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover .skill-icon {
+    transform: rotate(360deg);
+}
+
+.circular-progress {
+    width: 120px; /* Increased circle size */
+    height: 120px; /* Increased circle size */
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(var(--primary-color) calc(var(--percent) * 1%), var(--secondary-color) calc(var(--percent) * 1%));
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.inner-circle {
+    width: 100px; /* Increased inner circle size */
+    height: 100px; /* Increased inner circle size */
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.percentage {
+    font-size: var(--font-size-medium);
+    color: var(--text-color);
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+    margin-top: -10px; /* Adjusted margin */
+}
+
+.skill:hover .percentage {
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 10px 20px; /* Corrected padding value */
+        margin-left: 10px; /* Align the section to the very left */
+    }
+    .skills-section h2 {
+        font-size: 40px; /* Reduce font size for smaller screens */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Additional Responsive Design for 480px */
+@media (max-width: 480px) {
+    .skills-section {
+        padding: 10px 20px; /* Corrected padding value */
+        margin-left: 10px; /* Align the section to the very left */
+    }
+
+    .skills-section h2 {
+        font-size: 40px; /* Reduce font size for smaller screens */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .skills-container {
+        gap: 30px; /* Reduce gap between skills */
+    }
+
+    .skill {
+        width: 100%; /* Make skills full width */
+        max-width: 280px; /* Set a max width */
+    }
+
+    .skill-icon {
+        width: 40px; /* Decrease icon size */
+        height: 40px; /* Decrease icon size */
+    }
+
+    .circular-progress {
+        width: 100px; /* Decrease circle size */
+        height: 100px; /* Decrease circle size */
+    }
+
+    .inner-circle {
+        width: 80px; /* Decrease inner circle size */
+        height: 80px; /* Decrease inner circle size */
+    }
+
+    .percentage {
+        font-size: 1em; /* Adjust font size for percentage */
+    }
+    
+    /* Additional adjustment to shift to the left */
+    .skills-section {
+        transform: translateX(-10px); /* Optional: slight left shift for alignment */
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill p {
+    margin-top: 2px;
+}
+
+
+
+/* RESUME  */
+/* General Styling */
+.resume {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #000007;
+    padding: 30px;
+    border-radius: 15px;
+    
+    
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding-left: 350px;
+    padding-right: 100px;
+}
+
+
+.resume h2 {
+    color: #53f3ce;
+    text-align: left; 
+    /* padding-left: 200px; Added left padding */
+    font-size: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.resume p {
+    text-align: leftr;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.section h3 {
+    font-size: 1.8rem;
+    color: #d789d7;
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease-in-out; 
+}
+
+/* Flexbox for education and experience */
+.education-experience {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Styling for education and experience sections */
+.education, .experience {
+    width: 48%; /* Adjust width to fit side by side */
+}
+
+.entry {
+    margin-bottom: 30px;
+    padding-left: 25px;
+    border-left: 4px solid #53f3ce;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s forwards;
+}
+
+.entry:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.entry:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.entry .dot {
+    position: absolute;
+    left: -20px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background-color: #53f3ce;
+    border-radius: 50%;
+}
+
+.summary .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d789d7;
+}
+
+.summary .description {
+    color: #ddd;
+    font-size: 1.1rem;
+}
+
+.education .degree, .experience .role {
+    font-weight: bold;
+    color: #53f3ce;
+    font-size: 1.2rem;
+}
+
+.education .dates, .experience .dates {
+    font-style: italic;
+    color: #aab;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.education .institution, .experience .company {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-top: 5px;
+}
+
+.details {
+    margin-top: 10px;
+    color: #bbb;
+}
+
+.details li {
+    list-style: none;
+    font-size: 1rem;
+    margin-left: 20px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.details li:hover {
+    color: #53f3ce;
+}
+
+.details li:before {
+    content: "•";
+    position: absolute;
+    left: -20px;
+    color: #53f3ce;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .resume {
+        padding: 20px;
+    }
+    .resume h2 {
+        font-size: 2rem;
+        padding-left: 0; /* Remove left padding on small screens */
+    }
+    .section h3 {
+        font-size: 1.5rem;
+    }
+    .education, .experience {
+        width: 100%; /* Stack sections on small screens */
+        margin-bottom: 20px;
+    }
+    .entry .dot {
+        left: -15px;
+        top: 5px;
+    }
+    .summary .description, .education .degree, .experience .role {
+        font-size: 1rem;
+    }
+    .details li {
+        font-size: 0.9rem;
+    }
+}
